@@ -9,7 +9,7 @@ class kernel(object):
     def __init__(self, nvar):
 
         self.nvar = nvar
-        self.ivarf = np.loadtxt("ivar_%i.dat" % (self.nvar), dtype = int) - 1  # 9, 57, 81, 289, 625
+        self.ivarf = np.loadtxt("../etc/ivar_%i.dat" % (self.nvar), dtype = int) - 1  # 9, 57, 81, 289, 625
         self.nf = np.shape(self.ivarf)[0]
 
         print("   Kernel initialized with filter size %i and %i free parameters" % (self.nf, self.nvar))
